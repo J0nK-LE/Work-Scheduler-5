@@ -1,3 +1,15 @@
+let saveBtn = $(".saveBtn");
+let textArea = $(".textArea")
+// let buttonSaves = target the button clicked parents 2nd child
+
+// saveBtn.addEventListener("click", function(event){
+//     console.log(buttonSaves)
+
+//     function storeEvents() {
+//                 localStorage.setItem("events", JSON.stringify(events));
+//       }
+// })
+
 
 setInterval(function() {
     $("#currentDay").text(moment().format("dddd, MMMM Do [at ] hh:mm:ss a"));
