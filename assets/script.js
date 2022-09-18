@@ -19,19 +19,28 @@ let textArea3 = $("#threeP")
 let textArea4 = $("#fourP")
 let textArea5 = $("#fiveP")
 
-let currentTime = moment().format("H")
+let currentTime = parseInt(moment().format("H"))
+// let currentTime = 19;
 let element;
-let getLocalStorage = localStorage.getItem("textArea")
+let getLocalStorage9 = localStorage.getItem("nineA")
+let getLocalStorage10 = localStorage.getItem("tenA")
+let getLocalStorage11 = localStorage.getItem("elevenA")
+let getLocalStorage12 = localStorage.getItem("twelveP")
+let getLocalStorage1 = localStorage.getItem("oneP")
+let getLocalStorage2 = localStorage.getItem("twoP")
+let getLocalStorage3 = localStorage.getItem("threeP")
+let getLocalStorage4 = localStorage.getItem("fourP")
+let getLocalStorage5 = localStorage.getItem("fiveP")
 
-textArea9.text(getLocalStorage)
-textArea10.text(getLocalStorage)
-textArea11.text(getLocalStorage)
-textArea12.text(getLocalStorage)
-textArea1.text(getLocalStorage)
-textArea2.text(getLocalStorage)
-textArea3.text(getLocalStorage)
-textArea4.text(getLocalStorage)
-textArea5.text(getLocalStorage)
+textArea9.text(getLocalStorage9)
+textArea10.text(getLocalStorage10)
+textArea11.text(getLocalStorage11)
+textArea12.text(getLocalStorage12)
+textArea1.text(getLocalStorage1)
+textArea2.text(getLocalStorage2)
+textArea3.text(getLocalStorage3)
+textArea4.text(getLocalStorage4)
+textArea5.text(getLocalStorage5)
 
 setInterval(function() {
     $("#currentDay").text(moment().format("dddd, MMMM Do [at ] hh:mm:ss a"))    
@@ -41,35 +50,78 @@ saveBtn9.on("click", function (){
     
         element = textArea9.val();
         console.log("text area 9 ", element);
-        localStorage.setItem("textArea", element);
+        localStorage.setItem("nineA", element);
       })
     
 saveBtn10.on("click", function (){
     
         element = textArea10.val();
         console.log("text area 10 ", element);
-        localStorage.setItem("textArea", element);
+        localStorage.setItem("tenA", element);
     
     })
     
+saveBtn11.on("click", function (){
     
-    function displayTime () {
+        element = textArea11.val();
+        console.log("text area 11 ", element);
+        localStorage.setItem("elevenA", element);
+    
+    })
+saveBtn12.on("click", function (){
+    
+        element = textArea12.val();
+        console.log("text area 12 ", element);
+        localStorage.setItem("twelveP", element);
+    
+    })
+saveBtn1.on("click", function (){
+    
+        element = textArea1.val();
+        console.log("text area 1 ", element);
+        localStorage.setItem("oneP", element);
+    
+    })
+    
+saveBtn2.on("click", function (){
+    
+        element = textArea2.val();
+        console.log("text area 2 ", element);
+        localStorage.setItem("twoP", element);
+    
+    })
+saveBtn3.on("click", function (){
+    
+        element = textArea3.val();
+        console.log("text area 3 ", element);
+        localStorage.setItem("threeP", element);
+    
+    })
+    
+saveBtn4.on("click", function (){
+    
+        element = textArea4.val();
+        console.log("text area 4 ", element);
+        localStorage.setItem("fourP", element);
+    
+    })
+saveBtn5.on("click", function (){
+    
+        element = textArea5.val();
+        console.log("text area 5 ", element);
+        localStorage.setItem("fiveP", element);
+    
+    })
+    
+
+    
+    
+function displayTime () {
         console.log(currentTime);
-        if (currentTime === "9") {
-            $("#nineA").addClass("present")
-            $("#tenA").addClass("future")
-            $("#elevenA").addClass("future")
-            $("#twelveP").addClass("future")
-            $("#oneP").addClass("future")
-            $("#twoP").addClass("future")
-            $("#threeP").addClass("future")
-            $("#fourP").addClass("future")
-            $("#fiveP").addClass("future")
-        }
-        if (currentTime === "10") {
-            $("#nineA").addClass("past")
-            $("#tenA").addClass("present")
-            $("#elevenA").addClass("future")
+    if (currentTime === 9) {
+        $("#nineA").addClass("present")
+        $("#tenA").addClass("future")
+        $("#elevenA").addClass("future")
         $("#twelveP").addClass("future")
         $("#oneP").addClass("future")
         $("#twoP").addClass("future")
@@ -77,7 +129,18 @@ saveBtn10.on("click", function (){
         $("#fourP").addClass("future")
         $("#fiveP").addClass("future")
     }
-    if (currentTime === "11") {
+    if (currentTime === 10) {
+        $("#nineA").addClass("past")
+        $("#tenA").addClass("present")
+        $("#elevenA").addClass("future")
+        $("#twelveP").addClass("future")
+        $("#oneP").addClass("future")
+        $("#twoP").addClass("future")
+        $("#threeP").addClass("future")
+        $("#fourP").addClass("future")
+        $("#fiveP").addClass("future")
+    }
+    if (currentTime === 11) {
         $("#nineA").addClass("past")
         $("#tenA").addClass("past")
         $("#elevenA").addClass("present")
@@ -88,7 +151,7 @@ saveBtn10.on("click", function (){
         $("#fourP").addClass("future")
         $("#fiveP").addClass("future")
     }
-    if (currentTime === "12") {
+    if (currentTime === 12) {
         $("#nineA").addClass("past")
         $("#tenA").addClass("past")
         $("#elevenA").addClass("past")
@@ -99,7 +162,7 @@ saveBtn10.on("click", function (){
         $("#fourP").addClass("future")
         $("#fiveP").addClass("future")
     }
-    if (currentTime === "13") {
+    if (currentTime === 13) {
         $("#nineA").addClass("past")
         $("#tenA").addClass("past")
         $("#elevenA").addClass("past")
@@ -110,7 +173,7 @@ saveBtn10.on("click", function (){
         $("#fourP").addClass("future")
         $("#fiveP").addClass("future")
     }
-    if (currentTime === "14") {
+    if (currentTime === 14) {
         $("#nineA").addClass("past")
         $("#tenA").addClass("past")
         $("#elevenA").addClass("past")
@@ -121,7 +184,7 @@ saveBtn10.on("click", function (){
         $("#fourP").addClass("future")
         $("#fiveP").addClass("future")
     }
-    if (currentTime === "15") {
+    if (currentTime === 15) {
         $("#nineA").addClass("past")
         $("#tenA").addClass("past")
         $("#elevenA").addClass("past")
@@ -132,7 +195,7 @@ saveBtn10.on("click", function (){
         $("#fourP").addClass("future")
         $("#fiveP").addClass("future")
     }
-    if (currentTime === "16") {
+    if (currentTime === 16) {
         $("#nineA").addClass("past")
         $("#tenA").addClass("past")
         $("#elevenA").addClass("past")
@@ -143,7 +206,7 @@ saveBtn10.on("click", function (){
         $("#fourP").addClass("present")
         $("#fiveP").addClass("future")
     }
-    if (currentTime === "17") {
+    if (currentTime === 17) {
         $("#nineA").addClass("past")
         $("#tenA").addClass("past")
         $("#elevenA").addClass("past")
@@ -154,7 +217,7 @@ saveBtn10.on("click", function (){
         $("#fourP").addClass("past")
         $("#fiveP").addClass("present")
     }
-    if ((!currentTime === "9") || (!currentTime === "10") || (!currentTime === "11") || (!currentTime === "12") || (!currentTime === "13") || (!currentTime === "14") || (!currentTime === "15") || (!currentTime === "16") || (!currentTime === "17")) {
+    if (currentTime >= 18 || currentTime <= 8) {
         $("#nineA").addClass("future")
         $("#tenA").addClass("future")
         $("#elevenA").addClass("future")
@@ -165,6 +228,17 @@ saveBtn10.on("click", function (){
         $("#fourP").addClass("future")
         $("#fiveP").addClass("future")
     }
+    // if ((!currentTime === "9") || (!currentTime === "10") || (!currentTime === "11") || (!currentTime === "12") || (!currentTime === "13") || (!currentTime === "14") || (!currentTime === "15") || (!currentTime === "16") || (!currentTime === "17")) {
+    //     $("#nineA").addClass("future")
+    //     $("#tenA").addClass("future")
+    //     $("#elevenA").addClass("future")
+    //     $("#twelveP").addClass("future")
+    //     $("#oneP").addClass("future")
+    //     $("#twoP").addClass("future")
+    //     $("#threeP").addClass("future")
+    //     $("#fourP").addClass("future")
+    //     $("#fiveP").addClass("future")
+    // }
     // else {
     //     $("#nineA").addClass("future")
     //     $("#tenA").addClass("future")
